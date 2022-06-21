@@ -1,0 +1,136 @@
+<html>
+    <head>
+          <title>हस्तकला Bazaar</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqulaskry/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<style>
+
+        /* Add a black background color to the top navigation */
+#BAZ{
+    font-size:100px;
+    font-family:lobster;
+
+     }
+#ss{
+    font-family:Akronim ;
+    font-size:40px;
+
+}
+.topnav {
+  background-color: #030303;
+  overflow: hidden;
+}
+ body{
+           background-color: #fff4e6;
+           font-size: 17px;
+     }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #fff4e6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:  #fff9f2;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #fadaac;
+  color: black;
+}
+
+
+
+.line{
+    color: black
+}
+
+
+.options:hover{
+    background-color: black;
+    color: #fff4e6 !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+
+
+</style>
+</head>
+ <body>
+     </style>
+ <body>
+      <title>Login</title>
+    <section id="slog">
+        <center>
+        <span id="BAZ">हस्तकला Bazaar</span>
+        <br>
+     <span id="ss">Where the art comes from the heart</span>
+     </section>
+     </center>
+
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a  href="/Stories">stories</a>
+  {% if session["user_id"] %}
+  {% if session["role"] == "Customer" %}
+  <a href="/search">Artisans</a>
+  <a href="/logout">Log out</a>
+  {% endif %}
+  {% endif %}
+  {% if session["user_id"] %}
+  {% if session["role"]=="Artisan" %}
+  <a href = "/profile">Edit Profile</a>
+  {% endif %}
+  {% endif %}
+  {% if  session["role"]!="Artisan"%}
+  {% if  session["role"]!="Customer"%}
+  <a href="/register">Register</a>
+  <a class="active" href="/login">Log In</a>
+  {% endif %}
+  {% endif %}
+
+</div>
+
+<html>
+<body>
+    <center>
+  <form action="/login" method="post">
+      <br>
+		<div class="form-group">
+			<input style = "font-size:20px;width:300px" autocomplete="off" autofocus class="form-control" name="name" placeholder="Name" type="text">
+        </div>
+        <br>
+        <div class="form-group">
+            <input style = "font-size:20px;width:300px" class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+       <br>
+     <button class="btn btn-primary" style="background-color:#;font-size:20px;width:100px" type="submit" >Log In</button>
+    </form>
+    </center>
+      </body>
+      </html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>हस्तकला Bazaar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqulaskry/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+<style>
+  #slog{
+        background-color:  #fff4e6;
+       height:200px;
+       font-family:Anton;
+     }
+     #home_page{
+         margin-top: 40px;
+         height:500px;
+        background-color: #fff4e6;
+        text-align: center;
+     }
+     #main_txt {
+
+                 text-align: center;
+                 font-size: 20px;
+     }
+     #BAZ{
+         font-size:100px;
+         font-family:Lobster;
+         ;
+     }
+#ss{
+    font-family:Akronim;
+    font-size:40px; 
+    
+}
+
+ .topnav {
+  background-color: #030303;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #fff4e6;
+  text-align: center;
+  padding: 20px 5px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:  #fff9f2;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #fadaac;
+  color: black;
+}
+
+     body{
+           background-color: #fff4e6;
+           font-size: 17px;
+     }
+
+    
+.button {
+  font-size: 30px;
+}
+
+.options:hover{
+    background-color: black;
+    color: #fff4e6 !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.button{
+    font-size: 90px;
+}
+</style>
+ <body>
+      <title>Register</title>
+    <section id="slog">
+        <center>
+        <span id="BAZ">हस्तकला Bazaar</span>
+        <br>
+     <span id="ss">Where the art comes from the heart</span>
+     </section>
+     </center>
+            
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="/Stories">stories</a>
+  {% if session["user_id"] %}
+  {% if session["role"] == "Customer" %}
+  <a href="/search">Artisans</a>
+  <a href="/logout">Log out</a>
+  {% endif %}
+  {% endif %}
+  {% if session["user_id"] %}
+  {% if session["role"]=="Artisan" %}
+  <a href = "/profile">Edit Profile</a>
+  {% endif %}
+  {% endif %}
+  {% if  session["role"]!="Artisan"%}
+  {% if  session["role"]!="Customer"%}
+  <a class="active" href="/register">Register</a>
+  <a href="/login">Log In</a>
+  {% endif %}
+  {% endif %}
+
+</div>
+  
+   
+   <html>
+      <body>
+        <center>
+    <form action="/register" method="post">
+        <br>
+        <div class="button">
+            
+             
+             <input style ="font-size: 20px;width:300px"autocomplete="off" autofocus class="form-control" name="username" placeholder="Enter username" type="text" >
+        </div>
+        <br>
+         <div class="button">
+            <input style="font-size:20px;width:300px"autocomplete="off" autofocus class="form-control" name="Email" placeholder="Please enter email" type="text">
+        </div><br>
+                 
+        <br>
+        <div class="button">
+            <input style ="font-size: 20px;width:300px" class="form-control" name="password" placeholder="Please enter password" type="password">
+        </div>
+        <br>
+                 <div class="button">
+            <input style ="font-size: 20px;width:300px" class="form-control" name="confirmation" placeholder="Password(again)" type="password">
+        </div>
+     <br>
+      <div class="button">
+            <select style ="font-size: 20px;width:300px" class="form-control" name="Age">
+                <option disabled selected value="">Age</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+        </select>
+            
+        </div>
+        <br>
+         <div class="button">
+            <select style ="font-size: 20px;width:300px" class="form-control" name="Grade">
+                <option disabled selected value="">Grade</option>
+                    <option value="9th">Freshman(9th)</option>
+                    <option value="10th">Sophmore(10th)</option>
+                    <option value="11th">Junior(11th)</option>
+                    <option value="12th">Senior(12th)</option>
+                
+        </select>
+            
+        </div>
+         <div class="button">
+            <select style ="font-size: 20px;width:300px" class="form-control" name="Finance">
+                <option disabled selected value="">Family Income</option>
+                    <option value="Low">Low Income(₹3 lakh - ₹6 lakh)</option>
+                    <option value="Middle">Middle Income(₹3 lakh - ₹6 lakh)</option>
+                    <option value="High">High Income(₹3 lakh - ₹6 lakh)</option>
+                 
+        </select>
+        </div>
+           <div class="button">
+            <select style ="font-size: 20px;width:300px" class="form-control" name="Interest">
+                <option disabled selected value="">Interest</option>
+                    <option value="Low">Low Income(₹3 lakh - ₹6 lakh)</option>
+                    <option value="Middle">Middle Income(₹3 lakh - ₹6 lakh)</option>
+                    <option value="High">High Income(₹3 lakh - ₹6 lakh)</option>
+                 
+        </select>
+        </div>
+           <div class="button">
+            <select style ="font-size: 20px;width:300px"class="form-control" name="Role">
+                <option disabled selected value="">Artisan or Customer</option>
+                    <option value="Artisan">Artisan</option>
+                    <option value="Customer">Customer</option>
+            </select>
+            
+
+        </div>
+        
+        <br> 
+        <button style ="font-size: 20px;"class="btn btn-primary" type="submit">Register</button>
+        <br>
+    </form>
+    </body>
+    </html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

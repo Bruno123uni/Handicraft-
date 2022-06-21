@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>हस्तकला Bazaar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqulaskry/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@600&display=swap" rel="stylesheet">
+
+
+    <title>repl.it</title>
+    <section id="slog">
+        <center>
+        <span id="BAZ">हस्तकला Bazaar</span>
+        <br>
+     <span id="ss">Where the art comes from the heart</span>
+     </section>
+     </center>
+<style>
+        /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #030303;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #fff4e6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:  #fff9f2;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #fadaac;
+  color: black;
+}
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    text-align: center;
+}
+
+
+
+     body{
+           background-color: #fff4e6;
+           font-size: 17px;
+     }
+     #logo{
+       text-align: center;
+       height:400px;
+       width:450px;
+       border-radius:3%;
+       border: 28px black groove;
+       margin-top: 20px;
+       left: 600px;
+       right: 500px;
+     }
+     #slog{
+        background-color:  #fff4e6;
+       height:300px;
+       font-family:Anton;
+     }
+     #home_page{
+         margin-top: 40px;
+         height:500px;
+        background-color: #fff4e6;
+        text-align: center;
+     }
+     #main_txt {
+
+                 text-align: center;
+                 font-size: 20px;
+     }
+     #BAZ{
+         font-size:100px;
+         font-family:Lobster;
+         ;
+     }
+#ss{
+    font-family:Akronim;
+    font-size:40px;
+
+}
+.line{
+    color: black
+}
+
+
+.options:hover{
+    background-color: black;
+    color: #fff4e6 !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    text-align: center;
+}
+#DDD{
+    border-radius:15%;
+    border:25px gold groove;
+}
+.abb{
+    font:25px;
+    font-family:Orbitron;
+}
+#High_Hopes{
+
+    text-align:left;
+}
+#Shooting-for-stars{
+    font-family:Monoton;
+
+}
+.Panic {
+    height:750px;
+    width:1300px;
+    border-radius:1%;
+    border:25px green groove;
+    margin-left:200px;
+}
+
+.abt{
+    font-family:Andada Pro;
+}
+</style>
+ <body>
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/Stories">stories</a>
+  {% if session["user_id"] %}
+  {% if session["role"] == "Customer" %}
+  <a href="/search">Artisans</a>
+  <a href="/logout">Log out</a>
+  {% endif %}
+  {% endif %}
+  {% if session["user_id"] %}
+  {% if session["role"]=="Artisan" %}
+  <a href = "/profile">Edit Profile</a>
+  {% endif %}
+  {% endif %}
+  {% if  session["role"]!="Artisan"%}
+  {% if  session["role"]!="Customer"%}
+  <a href="/register">Register</a>
+  <a href="/login">Log In</a>
+  {% endif %}
+  {% endif %}
+
+</div>
+
+        <center>
+<section id="home_page">
+
+       <img id="logo" src="https://lh3.googleusercontent.com/wGXnqQiTS6qzeBEEY-eiJdTMp3u6TETck_xBIQp8KLi4_ZvPaa56CypX7xo8_D_3ow-VJTDe3rENM3kK-c113Oxb84knS_G6PvnUTguocWpE9A_GxItSxR2XlXigtD7MlEki214DXz5iY0049hF1ydATPL8Y65MX5Jdq7kRymTXqz0BpMm6DyClOvfRcEOYvlOCpe1YOB0jV7RWnT9EZ6nZgl6aoxOT8JzIkK8qR4tPIrc3jUoTyHOUXLGWpncb_SbnYcvcTm7r0uaKIuxdtj2-XjCJ4cR2Bz2IdD1fSJjxWjDiKrOlw2YzB4YMZYgWYXXqzGfT-qedijDL75WtUXbaLi9B13QDXtLN7Z14BOFUmYrPUoEuPqj0-la8CQDvdIhKWJX5f8qOlzMSrESWbIdC8pWI7iE-aY1fvpp7jfHk9cScpCALkipFp-dzEIpQ_aSQ6Mpy4KjX--OAbbVVvbBlexgnkI74VN27cnPTXsCPZoJXekM0KB55EDxx6wir_tMWOsNNGBlAwFLkwuzCpzZu8GGAIdRYAqtJJkh6uL2So71coSjtluUdvxOMYe_eIbbGxIOGYSngzoCIhlBH-jQENmGA1u5PR7TBuK4nh_qyxl1cEo6I_c05qI4DYvGDRl1r4CMJMhQnOc6Q8J6ZB3jrCtsFlA8XBJhax_bCxAtM5QGfTTEs101fn-dUsI3bIR8chencrAdIFs_4f=s500-no?authuser=0">
+        <h3 id="bale">A Site By Young <b>Teen Visionaries</b></h3>
+    </section>
+    </center>
+    <section id="main_txt">
+        <h1>Greetings or नमस्ते!</h1>
+                <h1> --------------------------------------------------------------------------------------------------------------------------</h1>
+
+        <hr class="line">
+
+        <p id="main-txt">
+            A website designed and developed by visionary teenagers endeavouring to bring the limelight to local artisians via a the typical modern way, a website. This website explores a vast array of information from popular arts of local artisians to ways to purchase them. This helps local artisians to promote their business as well as customers to purchase authentic work. हस्तकला Bazaar is a non-profit entity/ organization to urge people to purchase and encourage local artisians' businesses as well as their arts. Please purchase any handicraft from the site by signing in to the website and thus, helping these Artisians to coninue their work and additionally, bring elegance to your home. Have a good purchase!
+        </p>
+        <h1> --------------------------------------------------------------------------------------------------------------------------</h1>
+    <h3><u>Diwali Special</u></h3>
+    <p>Even though हस्तकला Bazaar is a growing site, it endeavours to grow amongst local artisians and awaits numerous products after it is recognised.Till then, stay tuned for any new products as well as jaw dropping sales in light to the great and
+    bright festival of Diwali foreshadowing the month of October. Scavenge for the most authentic and elegant handicrafts in the site by registering and thus encouraging the business.video on YouTube displaying हस्तकला Bazaar, its features, etc. and the most
+    elaborate submission will recieve an offer on the handicrafts they purchase within the month of October. Tag the video with #HastakalaBazaar. No time to waste, lets begin filiming!</p>
+    <br>
+    <img src="https://i.pinimg.com/originals/c3/a0/04/c3a004c6bb7dc42cb9a032871422f9ec.jpg" height="800" width="1000" id="DDD">
+    <br>
+    <br>
+    <h1>--------------------------------------------------------------------------------------------------------------------------------</h1>
+    <h3><u>About the Developers</u></h3>
+
+    <h2 class="abb">Aditi Dhapakka</h2>
+    <p class="abt">Aditi Dhakappa, is a very confident and helpful teenager. 
+    With her impeccable understanding of the world's issues and her bubbly personality
+    she helps design this website.Being a 13 year old, Aditi loves to MUN and learn. 
+    She is a great basketball player and one of the most intelligent people we as a team know of.</p>
+    <br>
+    <h2 class="abb">Apporva Agarwal</h2>
+    <p class="abt">Apoorva Agarwal is an aspiring teenager. A brilliant coder, she knows python, html, css and many other coding languages.
+    Besides her prowess at computers, she is an excellent orator, extremely confident and thoroughly helpful. She is a pleasure to work with. 
+</p>
+    <br>
+    <h2 class="abb"><u>Harshika Hundal</u></h2>
+    <p class="abt">Harshika Hundal is a legendary 13 year old, with several amazing accomplishments up her sleeve.
+    But she is beyond her achievements, being an exceptional girl and perennially joyful. 
+    She loves singing, dancing, art, debating, and plays various sports and instruments.</p>
+    <br>
+    <h2 class="abb">Rudra Kothiyal</h2>
+    <p class="abt">Rudra Kothiyal, a brilliant coder and a very confident speaker. Being13 he comes up with great ideas and is very fond of history as a subject. 
+    He helped code the website and bring the team's idea to life</p>
+    <br>
+    <h2 class="abb"><u>Samanvay Gupta</u></h2>
+    <p class="abt">Greetings, I am Samanvay Gupta and as you might have seen in the website, I am a teenager; 13 years old and am in 8th grade. A few of my hobbies include playing the piano, creating musical pieces, playing sports (especially football and hockey)
+    and coding applications as well as websites. I am a 4th ranker in zonal and International in the IEO (International English Olympiad) and also have participated in a few MUNs. Arriving at the idea of the website: to aid local artisians, I was incredibly pleased and ecstatic to bring the idea to action by creating the website
+    and feel proud being the co-creator of  हस्तकला Bazaare!</p>
+    <hr>
+    <br>
+    <h1>-------------------------------------------------------------------------------------------------------------------------------</h1>
+    <h3 id="Shooting-for-stars"><u>About-icraft</u></h3>
+    <ol id="High_Hopes" type"1">
+        <li>India itself has 7 million artisians! That is about 0.50% of its total population!</li>
+        <img class="Panic" src="https://images.pexels.com/photos/1485630/pexels-photo-1485630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <br>
+        <br>
+        <br>
+        <li>In 2019, India exported handicrafts worth nearly $128 billion! A year before, it exported handicrafts worth $118 billion!</li>
+        <img class="Panic" src="https://images.pexels.com/photos/2766334/pexels-photo-2766334.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <br>
+        <br>
+        <br>
+        <li>The handicraft industry provides employment to those of the weaker society! Additionally, many women have been helped by the industry, with nearly 38 lakhs woman working in the industry</li>
+        <img class="Panic" src="https://images.unsplash.com/photo-1523287562758-66c7fc58967f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyZWVyJTIwZ3Jvd3RofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+        <br>
+        <br>
+        <br>
+        <li>In today's modern era, Weddings can be captured by the utility of the camears, however, during the period of Ramayan, the "Vivah" or marriage of Lord Ram and Sita was captured by handicraft; a painting, when
+        King Janak (Father of Sita) commissioned artists to do so. This painting is known as the Mithila Painting. or Madhubani Painting.</li>
+        <img class="Panic" src="https://i.pinimg.com/originals/31/08/c6/3108c6fefca38259163953a094315a82.jpg">
+        <br>
+        <br>
+        <br>
+        <li> According to the Guiness Book World Records, the most expensive Saree in the world is the Kancheepuram Silk Saree that was sold for a staggering Rs 39,31,627!</li>
+        <img class="Panic" src="https://i.ytimg.com/vi/I2qSowoPSsg/maxresdefault.jpg">
+        <br>
+        <i>The Image of the Saree is above</i>
+    </ol>
+
+

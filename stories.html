@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+ <title>हस्तकला Bazaar</title>
+     <head>
+          <title>हस्तकला Bazaar</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqulaskry/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+<style>
+.img-responsive{
+    border-radius:1%;
+    border:15px black groove;
+}
+        /* Add a black background color to the top navigation */
+#BAZ{
+    font-size:100px;
+    font-family:lobster;
+
+     }
+#ss{
+    font-family:Akronim ;
+    font-size:40px;
+}
+.travel_mainDiv{
+    border: 1px solid #c7c7c7;
+    padding-left: 0px;
+    padding-right: 0px;
+    float: none
+}
+.travel_mainDiv img{
+    width: 100%;
+}
+.travel_mainDiv h5, .travel_mainDiv p{
+    margin-left: 20px
+}
+        /* Add a black background color to the top navigation */
+
+.topnav {
+  background-color: #030303;
+  overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #fff4e6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:  #fff9f2;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.active {
+  background-color: #fadaac;
+  color: black;
+}
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    text-align: center;
+}
+
+
+body{
+           background-color: #fff4e6;
+           font-size: 17px;
+     }
+     #logo{
+       text-align: center;
+       height:400px;
+       width:450px;
+       border-radius:3%;
+       border: 25px black groove;
+       margin-top: 20px;
+       left: 600px;
+       right: 500px;
+     }
+     #slog{
+        background-color:  #fff4e6;
+       height:300px;
+       font-family:Anton;
+     }
+     #home_page{
+         margin-top: 40px;
+         height:500px;
+        background-color: #82B3C2;
+        text-align: center;
+     }
+     #main_txt{
+    text-align: center;
+    font-size: 20px;
+     }
+    #BAZ{
+         font-size:100px;
+         font-family:Lobster;
+     }
+    #ss{
+    font-family:Akronim;
+    font-size:30px;
+
+    }
+
+.options:hover{
+    background-color: black;
+    color: #fff4e6 !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    text-align: center;
+}
+     </style>
+     </head>
+ <body>
+      <title>Login</title>
+    <section id="slog">
+        <center>
+        <span id="BAZ">हस्तकला Bazaar</span>
+        <br>
+     <span id="ss">Where the art comes from the heart</span>
+     </section>
+     </center>
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a class="active" href="/Stories">stories</a>
+  {% if session["user_id"] %}
+  {% if session["role"] == "Customer" %}
+  <a href="/search">Artisans</a>
+  <a href="/logout">Log out</a>
+  {% endif %}
+  {% endif %}
+  {% if session["user_id"] %}
+  {% if session["role"]=="Artisan" %}
+  <a href = "/profile">Edit Profile</a>
+  {% endif %}
+  {% endif %}
+  {% if  session["role"]!="Artisan"%}
+  {% if  session["role"]!="Customer"%}
+  <a href="/register">Register</a>
+  <a href="/login">Log In</a>
+  {% endif %}
+  {% endif %}
+
+</div>
+<html>
+  <head>
+    <title>Stories</title>
+  </head>
+  <body>
+      <h1>
+          How हस्तकला Bazaar helps
+      </h1>
+        <div class = "container">
+    <div class = "page-header" id = "travel">
+        <h2 class = "text-capitalize"> Stories</h2>
+    </div>
+    <center>
+        <div class = "travel_mainDiv">
+            <h4 class = "text-capitalize"><kbd>Artisans</kbd></h4>
+            <hr>
+             <img class = "img-responsive" src ="https://images.yourstory.com/cs/21/98e25df018b511e988ceff9061f4e5e7/Imagephmr1573470708210jpg">
+            <h5 class = "text-left text-capitalize text-success">Chandrashekar Rao, potter, Mumbai</h5>
+            <p class = "text-left text-muted">  I started making pots when I was 12. My shop was the most happening place in the 90’s, and then bigger
+          stores and online shopping came into the picture, and slowly but surely, my profits went downward. I had
+          to incur losses and was not able to sustain. I had to go searching for other jobs that were not as
+          welcoming. Thanks to Hastakala Bazaar, my life has a meaning again. I can make pots and business is
+          going better than ever. Thank you Hastakala Bazaar for this opportunity. You have changed my life.</p>
+
+          <br>
+                      <h5 class = "text-left text-capitalize text-success"> चंद्रशेखर राव, कुम्हा</h5>
+            <p class = "text-left text-muted">    मैंने १२ साल की उम्र में बर्तन बनाना शुरू कर दिया था। मेरी दुकान ९० के दशक में सबसे अधिक होने वाली जगह थी, और फिर बड़ी
+          स्टोर और ऑनलाइन शॉपिंग तस्वीर में आ गए, और धीरे-धीरे लेकिन निश्चित रूप से, मेरा मुनाफा नीचे चला गया। मैं था
+          नुकसान उठाना पड़ा और टिकने में सक्षम नहीं था। मुझे अन्य नौकरियों की तलाश में जाना पड़ा जो कि नहीं थीं
+          स्वागत करते हुए। हस्तकला बाजार के लिए धन्यवाद, मेरे जीवन का एक अर्थ फिर से है। मैं बर्तन बना सकता हूँ और व्यापार है
+          पहले से बेहतर जा रहा है। इस अवसर के लिए धन्यवाद हस्तकलरी जिंदगी बदल दी बाजार। तुमने
+</p>
+        </div>
+    </center>
+
+          <br><br>
+                <center>
+        <div class = "travel_mainDiv"><hr>
+            <hr>
+            <img class = "img-responsive" src ="https://www.unnatisilks.com/blog/wp-content/uploads/2018/07/spinning.jpg" height="500px" width="450px">
+            <h5 class = "text-left text-capitalize text-success">Jayashree, Basket weaver, Lucknow</h5>
+            <p class = "text-left text-muted"> Due to the pandemic, my business was in turmoil, and I was struggling to meet ends. However, Hastakala
+          Bazaar advertised my products and helped in attracting customers, so that my business didn’t have to
+          suffer, and I was able to achieve stability in my career as a basket weaverे.</p><br>
+         <h5 class = "text-left text-capitalize text-success">जयश्री, टोकरी बुनकर, लखनऊ
+</h5>
+<br>
+
+           <p class = "text-left text-muted">   महामारी के कारण, मेरा व्यवसाय उथल-पुथल में था, और मैं अपनी जरूरतों को पूरा करने के लिए संघर्ष कर रहा
+         था। हालाँकि, हस्तकला बाज़ार ने मेरे उत्पादों का विज्ञापन किया और ग्राहकों को आकर्षित करने में मदद की, ताकि मेरे
+         व्यवसाय को नुकसान न उठाना पड़े, और मैं टोकरी बुनकर के रूप में
+         अपने करियर में स्थिरता प्राप्तरने </p>
+</div> <br> <br>
+
+
+
+ <center>
+        <div class = "travel_mainDiv">
+            <img class = "img-responsive" src ="https://lp-cms-production.imgix.net/2020-11/shutterstock_551163163%20A%20rural%20craftswoman%20paints%20on%20colorful%20handicraft%20items.jpg">
+            <hr>
+            <h5 class = "text-left text-capitalize text-success"> Aarati Baniya, clothes and shoemaker, Rajasthan</h5>
+            <p class = "text-left text-muted">  Making clothing items and shoes is our family tradition, and we have been working on this to support our
+          family. Year on year, tourists would buy our goods and we would earn just enough to feed our families.
+          However, the arrival of the pandemic caused people to worry about their health, and we lost many
+          customers in the process. That was before Hastakala Bazaar offered to help us, and now the business
+          has regained a fraction of its original crowd</p>
+          <br>
+
+            <h5 class = "text-left text-capitalize text-success"> आरती बनिया, कपड़े और मोची, राजस्थान </h5>
+
+            <p class = "text-left text-muted"> कपड़ों के सामान और जूते बनाना हमारी पारिवारिक परंपरा है, और हम अपने समर्थन के लिए इस पर काम कर रहे हैं
+          परिवार। साल दर साल, पर्यटक हमारा सामान खरीदते थे और हम अपने परिवारों को खिलाने के लिए पर्याप्त कमाते थे।
+          हालांकि, महामारी के आने से लोगों को अपने स्वास्थ्य की चिंता सताने लगी और हमने कई लोगों को खो दिया
+          प्रक्रिया में ग्राहक। वह पहले हस्तकला बाजार ने हमारी मदद करने की पेशकश की थी, और अब व्यापार
+          अपनी मूल भीड़ का एक अंश वापस पा लिय ह।
+         </p>
+        </div>
+    </center>
+
+
+
+
+        <br><br>
+    <center>
+        <div class = "travel_mainDiv">
+         <img class = "img-responsive" src ="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/05/20/Pictures/_10059fa6-9a46-11ea-b5cf-22f71a9413fe.jpg">
+          <hr>
+          <h5 class = "text-left text-capitalize text-success"> Rajesh Kariappa, Toymaker, Mandya, Karnataka</h5>
+          <p class ="text-left text-muted"> Toymaking has been an integral part of my life, and I decided that I wanted to have it as my career. Ever
+          since I opened my shop, I haven’t been having very good business on account of hi-end toys that are more
+          jazzy and attractive. However, I don’t want the culture of wooden Indian toys to die out, and am
+          determined to persevere. Hastakala Bazaar is a very good platform for aspiring handicraft makers like
+          myself, and it has worked hard to preserve India’s culture. It is a non-profit organization that has been
+          working hard towards helping the nation in its endeavors. Thank you Hastakala Bazaar for this beautiful
+          opportunity to express myself through my work.</p><br>
+          <h5 class = "text-left text-capitalize text-success"> राजेश करियप्पा, टॉयमेकर, मांड्या, कर्नाटक</h5>
+          <p class ="text-left text-muted">  टॉयमेकिंग मेरे जीवन का एक अभिन्न अंग रहा है, और मैंने फैसला किया कि मैं इसे अपने करियर के रूप में लेना चाहता हूं। कभी
+          जब से मैंने अपनी दुकान खोली है, मेरे पास अधिक महंगे खिलौनों के कारण बहुत अच्छा व्यवसाय नहीं रहा है
+          जैज़ी और आकर्षक। हालांकि, मैं नहीं चाहता कि लकड़ी के भारतीय खिलौनों की संस्कृति खत्म हो जाए, और मैं
+          दृढ़ता के लिए दृढ़ संकल्प। हस्तकला बाजार जैसे महत्वाकांक्षी हस्तशिल्प निर्माताओं के लिए एक बहुत अच्छा मंच है
+          मैं, और इसने भारत की संस्कृति को संरक्षित करने के लिए कड़ी मेहनत की है। यह एक गैर-लाभकारी संगठन है जिसे किया गया है
+          अपने प्रयासों में राष्ट्र की मदद करने की दिशा में कड़ी मेहनत कर रहे हैं। शुक्रिया हस्तकला बाज़ार इस ख़ूबसूरत के लिए
+          मेरे काम के माध्यम से खुद को व्यक्त करने का अवसर</p>
+          </div>
+    </center>
+
+          <br><br>
+          <center>
+        <div class = "travel_mainDiv"><hr>
+             <img class = "img-responsive" src ="https://fashionista.com/.image/t_share/MTUxOTUyNDUxNjYwOTQ4OTA3/nest-handworker-economy.jpg">
+            <h5 class = "text-left text-capitalize text-success"> Naya Sinha, Shop Owner, New Delhi.</h5>
+          <p class ="text-left text-muted"> When I heard of a platform to sell my glazed pottery and purses, I was ecstatic. It was finally an
+          opportunity to work and be financially independent. As a woman, I received no formal education, and was
+          forced to work as a maid for years. After a while, I realised that it was my dream to start a business, and
+          Hastakala Bazaar has helped me every step of the way. Thank you Hastakala Bazaar. Make sure to check
+          out my products on my page @NayaSinha.</p><br>
+
+
+
+                      <h5 class = "text-left text-capitalize text-success">नया सिन्हा, दुकान मालिक, नई द कुम्हा</h5>
+                      <p class = "text-left text-muted">  जब मैंने अपने चमकीले मिट्टी के बर्तनों और पर्स को बेचने के लिए एक मंच के बारे में सुना, तो मैं बहुत खुश हुआ। यह अंत में एक था
+          काम करने और आर्थिक रूप से स्वतंत्र होने का अवसर। एक महिला के रूप में, मैंने कोई औपचारिक शिक्षा प्राप्त नहीं की, और थी
+          वर्षों से नौकरानी के रूप में काम करने के लिए मजबूर। थोड़ी देर बाद, मुझे एहसास हुआ कि व्यवसाय शुरू करना मेरा सपना था, और
+          हस्तकला बाजार ने हर कदम पर मेरी मदद की है। धन्यवाद हस्तकला बाजार। जांचना सुनिश्चित करें
+          मेरे पेज @NayaSinha पर मेरे उत्पादों को बहर क बाजार। तुमने
+</p>
+        </div>
+    </center>
+    </div>
+
+
+         <br><br><br>
+
+
+</html>

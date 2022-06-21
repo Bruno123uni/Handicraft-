@@ -1,0 +1,187 @@
+<html>
+<style>
+        /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #030303;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #fff4e6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:  #fff9f2;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #fadaac;
+  color: black;
+}
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    text-align: center;
+}
+
+
+
+     body{
+           background-color: #fff4e6;
+           font-size: 17px;
+     }
+     #logo{
+       text-align: center;
+       height:400px;
+       width:450px;
+       border-radius:3%;
+       border: 28px black groove;
+       margin-top: 20px;
+       left: 600px;
+       right: 500px;
+     }
+     #slog{
+        background-color:  #fff4e6;
+       height:300px;
+       font-family:Anton;
+     }
+     #home_page{
+         margin-top: 40px;
+         height:500px;
+        background-color: #fff4e6;
+        text-align: center;
+     }
+     #main_txt {
+
+                 text-align: center;
+                 font-size: 20px;
+     }
+     #BAZ{
+         font-size:100px;
+         font-family:Lobster;
+         ;
+     }
+#ss{
+    font-family:Akronim;
+    font-size:40px;
+
+}
+.line{
+    color: black
+}
+
+
+.options:hover{
+    background-color: black;
+    color: #fff4e6 !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+    text-align: center;
+}
+#DDD{
+    border-radius:15%;
+    border:25px gold groove;
+}
+.abb{
+    font:25px;
+    font-family:Orbitron;
+}
+
+</style>
+ <body>
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="/Stories">stories</a>
+  {% if session["user_id"] %}
+  {% if session["role"] == "Customer" %}
+  <a href="/search">Artisans</a>
+  <a href="/logout">Log out</a>
+  {% endif %}
+  {% endif %}
+  {% if session["user_id"] %}
+  {% if session["role"]=="Artisan" %}
+  <a href = "/profile">Edit Profile</a>
+  {% endif %}
+  {% endif %}
+  {% if  session["role"]!="Artisan"%}
+  {% if  session["role"]!="Customer"%}
+  <a class="active" href="/register">Register</a>
+  <a href="/login">Log In</a>
+  {% endif %}
+  {% endif %}
+
+</div>
+    <body>
+        <center>
+                <form action="/regart" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input style = "font-size:30px;" autocomplete="off" autofocus class="form-control-file" name="Storename" placeholder="Store name" type="text">
+        </div>
+        <br>
+         <div class="form-group">
+            <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Description" placeholder="A small description about you and your store" type="text">
+        <br>
+        </div>
+      <div class="form-group"> 
+     <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Img" placeholder="Image of your store" type="text">
+    </div>
+    <div class="form-group">
+        <br>
+            <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Address" placeholder="Please type in your address" type="text">
+        <br>
+        <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Ph" placeholder="Please type in your phone-number" type="text">
+        </div>
+     <br>
+     <br>
+      <span class="form-group">
+    <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Upload1" placeholder="Image of product" type="text"><input autocomplete="off" autofocus class="form-control" name="Priceofproduct1" placeholder="Price of Product " type="text">  <input autocomplete="off" autofocus class="form-control" name="NameofProduct1" placeholder="Name of Product " type="text"></span>
+     <br><br>
+     <span class="form-group">
+    <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Upload2" placeholder="Image of product" type="text"><input autocomplete="off" autofocus class="form-control" name="Priceofproduct2" placeholder="Price of Product " type="text">  <input autocomplete="off" autofocus class="form-control" name="NameofProduct2" placeholder="Name of Product" type="text"></span>
+      <br><br>
+      <span class="form-group">
+<input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Upload3" placeholder="Image of product" type="text"><input autocomplete="off" autofocus class="form-control" name="Priceofproduct3" placeholder="Price of Product " type="text">  <input autocomplete="off" autofocus class="form-control" name="NameofProduct3" placeholder="Name of Product" type="text"></span>
+      <br><br>
+      <span class="form-group">
+   <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Upload4" placeholder="Image of product" type="text"><input autocomplete="off" autofocus class="form-control" name="Priceofproduct4" placeholder="Price of Product " type="text">  <input autocomplete="off" autofocus class="form-control" name="NameofProduct4" placeholder="Name of Product" type="text"></span>
+       <br><br>
+       <span class="form-group">
+   <input  style = "font-size:30px;" autocomplete= "off" autofocus class="form-control" name="Upload5" placeholder="Image of product" type="text"><input autocomplete="off" autofocus class="form-control" name="Priceofproduct5" placeholder="Price of Product 1" type="text">  <input autocomplete="off" autofocus class="form-control" name="NameofProduct5" placeholder="Name of Product" type="text"></span>
+      <div class="form-group">
+            <label class="container">Select Type of Handicrafts
+           <br>
+          
+        <div class="form-group">
+            <select class="form-control" name="Type">
+                <option disabled selected value="">Types</option>
+                    <option value="Textiles">Textiles</option>
+                    <option value="Mud">Mud Handicraft</option>
+                    <option value="Papercraft">Papercraft</option>
+                    <option value="Stone">Stone Handicraft</option>
+                    <option value="Bamboo">Bamboo and Cane Handicraft</option>
+                    <option value="Wood">Wood Craft</option>
+            </select>
+        </div>
+        <br>
+
+        <button style = "font-size:30px;" class="btn btn-primary" type="submit">Register</button>
+        <br>
+    </form>
+        </center>
+</html>
